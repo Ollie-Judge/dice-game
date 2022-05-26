@@ -37,3 +37,13 @@ let dice2 = document.querySelectorAll("img")[1];
 console.log(dice2);
 
 dice2.setAttribute("src", randoImageSource2);
+
+// who wins?
+
+if (randoNum1 > randoNum2) {
+  document.querySelector("h1").innerHTML = "Player 1 Wins!";
+} else if (randoNum2 > randoNum1) {
+  document.querySelector("h1").innerHTML = "Player 2 Wins!";
+} else {
+  document.querySelector("h1").innerHTML = "It's A Draw!";
+}
