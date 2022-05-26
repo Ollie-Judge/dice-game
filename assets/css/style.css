@@ -48,3 +48,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+.playButton {
+  display: flex;
+  flex-direction: column;
+}

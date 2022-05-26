@@ -1,33 +1,37 @@
-// first dice
+const play = document.getElementById("play");
 
-let randoNum1 = Math.floor(Math.random() * 6) + 1; // generates random dice number for the first dice
+play.addEventListener("click", () => {
+  // first dice
 
-let randoDiceImage = "dice" + randoNum1 + ".png"; //takes the images and the random number and puts it together choosing between dice1.png and dice6.png
+  let randoNum1 = Math.floor(Math.random() * 6) + 1; // generates random dice number for the first dice
 
-let randoImageSource = "assets/img/" + randoDiceImage; // gets the source and connects it to the random dice imageimages/dice1.png - images/dice6.png
+  let randoDiceImage = "dice" + randoNum1 + ".png"; //takes the images and the random number and puts it together choosing between dice1.png and dice6.png
 
-let dice1 = document.querySelectorAll("img")[0];
+  let randoImageSource = "assets/img/" + randoDiceImage; // gets the source and connects it to the random dice imageimages/dice1.png - images/dice6.png
 
-dice1.setAttribute("src", randoImageSource);
+  let dice1 = document.querySelectorAll("img")[0];
 
-// second dice
+  dice1.setAttribute("src", randoImageSource);
 
-let randoNum2 = Math.floor(Math.random() * 6) + 1; // generates random dice number for the first dice
+  // second dice
 
-let randoDiceImage2 = "dice" + randoNum2 + ".png"; //takes the images and the random number and puts it together choosing between dice1.png and dice6.png
+  let randoNum2 = Math.floor(Math.random() * 6) + 1; // generates random dice number for the first dice
 
-let randoImageSource2 = "assets/img/" + randoDiceImage2; // gets the source and connects it to the random dice imageimages/dice1.png - images/dice6.png
+  let randoDiceImage2 = "dice" + randoNum2 + ".png"; //takes the images and the random number and puts it together choosing between dice1.png and dice6.png
 
-let dice2 = document.querySelectorAll("img")[1];
+  let randoImageSource2 = "assets/img/" + randoDiceImage2; // gets the source and connects it to the random dice imageimages/dice1.png - images/dice6.png
 
-dice2.setAttribute("src", randoImageSource2);
+  let dice2 = document.querySelectorAll("img")[1];
 
-// who wins?
+  dice2.setAttribute("src", randoImageSource2);
 
-if (randoNum1 > randoNum2) {
-  document.querySelector("h1").innerHTML = "Player 1 Wins!";
-} else if (randoNum2 > randoNum1) {
-  document.querySelector("h1").innerHTML = "Player 2 Wins!";
-} else {
-  document.querySelector("h1").innerHTML = "It's A Draw!";
-}
+  // who wins?
+
+  if (randoNum1 > randoNum2) {
+    document.querySelector("h1").innerHTML = "Player 1 Wins!";
+  } else if (randoNum2 > randoNum1) {
+    document.querySelector("h1").innerHTML = "Player 2 Wins!";
+  } else {
+    document.querySelector("h1").innerHTML = "It's A Draw!";
+  }
+});
